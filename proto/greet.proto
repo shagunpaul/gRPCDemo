@@ -4,6 +4,12 @@ option go_package="./proto";
 
 package greet_service;
 
+/*
+Open 2 terminals for client and server:
+Start the server command: go run server/main.go
+Start the client command: go run client/main.go
+*/
+
 service GreetService{
     rpc SayHello(NoParam) returns (HelloResponse);
     rpc SayHelloServerStreaming(NamesList) returns  (stream HelloResponse);
